@@ -1,0 +1,29 @@
+{
+  "name": "game-api-node",
+  "version": "1.0.0",
+  "description": "Game server control panel API — Node.js",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "build": "tsc",
+    "migrate": "psql $DATABASE_URL -f src/db/init.sql"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.400.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.11.0",
+    "redis": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.10.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
